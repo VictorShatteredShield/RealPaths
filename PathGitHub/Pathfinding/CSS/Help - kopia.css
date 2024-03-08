@@ -1,0 +1,26 @@
+html{
+    background-color:rgb(163, 181, 185) ;
+
+}
+
+
+
+
+
+.body{
+
+    display: grid;
+    background-color: rgb(60, 57, 57);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    border-radius: 10px;
+    
+}
+
+.TextHeadLine{
+    text-align: center;
+    grid-column: 2 / 6;
+    grid-row: 2 /6;
+    color: white;
+
+}
