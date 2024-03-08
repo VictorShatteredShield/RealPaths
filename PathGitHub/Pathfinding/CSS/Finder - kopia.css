@@ -1,7 +1,6 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    height: 100vh;
     background-color: #f0f0f0;
   }
 
@@ -14,7 +13,7 @@ body {
   }
   
   .ChangeColor.color2 {
-    background-color: #9d1ab8;
+    background-color: #a339b9;
   }
   
   .ChangeColor.color3 {
@@ -55,7 +54,8 @@ body {
     border-radius: 10px;
     padding-top: 25px;
     padding-inline: 50px;
-
+    border: none;
+    outline: none;
   }
   
   .VersionNumber {
@@ -114,7 +114,7 @@ body {
 
   }
   .End{
-    background-color: #9d1ab8;
+    background-color: #a339b9;
 
   }
   .Erase{
