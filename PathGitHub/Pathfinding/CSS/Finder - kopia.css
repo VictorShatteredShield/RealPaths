@@ -94,6 +94,11 @@ body {
     background-color: #2C7C82;
   }
 
+  a{
+    text-decoration: none;
+    color: black;
+}
+
   .small-box {
     width: calc(33.33% - 10px);
     height: 80px;
