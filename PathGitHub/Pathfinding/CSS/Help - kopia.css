@@ -1,0 +1,60 @@
+html{
+    background-color:rgb(163, 181, 185) ;
+
+}
+
+.body{
+
+    display: grid;
+    background-color: rgb(60, 57, 57);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    border-radius: 10px;
+    
+}
+
+.TextHeadLine{
+    text-align: center;
+    grid-column: 2 / 6;
+    grid-row: 2 /6;
+    color: white;
+
+}
+
+
+
+/*Header CSS*/
+.GoToHome{
+
+    width: 200px;
+    height: 40px;
+    background-color: #36D933;
+    border-radius: 10px;
+    padding-top: 25px;
+    padding-inline: 50px;
+    border: none;
+    outline: none;
+    text-align: center;
+  }
+
+  header {
+    display: flex;
+    grid-column: 1 / 7;
+    grid-row: 1 /2;
+    
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color:rgb(163, 181, 185) ;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  .VersionNumber {
+    width: 220px;
+    height: 20px;
+    background-color: #7DCCC7;
+    border-radius: 10px;
+    padding-top: 8px;
+    padding-left: 50px;
+  }
