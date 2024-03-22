@@ -5,44 +5,55 @@ document.addEventListener('DOMContentLoaded', function () {
   let isMouseDown = false;
   let startNode = null;
   let endNode = null;
+  let xGridSize = 25;
+  let yGridSize = 10;
+  let gridButtons = []; // Store references to grid buttons for faster access
+  let currentToolButton = null;
 
   function createGrid() {
-    for (let i = 0; i < 10; i++) {
-      for (let j = 0; j < 25; j++) {
+    for (let i = 0; i < yGridSize; i++) {
+      for (let j = 0; j < xGridSize; j++) {
         const button = document.createElement('button');
         button.className = 'grid-button';
         button.dataset.x = j;
         button.dataset.y = i;
-        button.addEventListener('mousedown', function () {
-          isMouseDown = true;
-          changeColor(this);
-        });
-        button.addEventListener('mouseenter', function () {
-          if (isMouseDown) {
-            changeColor(this);
-          }
-        });
-        button.addEventListener('mouseup', function () {
-          isMouseDown = false;
-        });
+        button.addEventListener('mousedown', handleMouseDown);
+        button.addEventListener('mouseenter', handleMouseEnter);
+        button.addEventListener('mouseup', handleMouseUp);
         gridContainer.appendChild(button);
+        gridButtons.push(button); // Store the button reference
       }
       gridContainer.appendChild(document.createElement('br'));
     }
   }
 
+  function handleMouseDown() {
+    isMouseDown = true;
+    changeColor(this);
+  }
+
+  function handleMouseEnter() {
+    if (isMouseDown) {
+      changeColor(this);
+    }
+  }
+
+  function handleMouseUp() {
+    isMouseDown = false;
+  }
+
   function changeColor(button) {
     const currentColor = activeColor;
-
     if (currentColor === 2 || currentColor === 3) {
-      gridContainer.querySelectorAll(`.ChangeColor.color${currentColor}`).forEach(function (existingButton) {
-        existingButton.className = 'grid-button ChangeColor color0';
+      gridButtons.forEach(existingButton => {
+        if (existingButton.classList.contains(`color${currentColor}`)) {
+          existingButton.className = 'grid-button ChangeColor color0';
+        }
       });
     }
 
     if (!button.classList.contains('color-button')) {
       button.className = `grid-button ChangeColor color${currentColor}`;
-
       if (currentColor === 2) {
         startNode = button;
       } else if (currentColor === 3) {
@@ -53,7 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function setActiveColor(color, button) {
     activeColor = color;
-
+    if (currentToolButton) {
+      currentToolButton.classList.remove('active');
+    }
+    button.classList.add('active');
+    currentToolButton = button;
     switch (color) {
       case 0:
         button.innerText = 'Eraser';
@@ -70,9 +85,32 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+
   function clearAll() {
-    gridContainer.querySelectorAll('.grid-button').forEach(function (button) {
+    gridButtons.forEach(button => {
       button.className = 'grid-button';
+    });
+    startNode = null;
+    endNode = null;
+    activeColor = 0;
+  }
+
+  function clearPath() {
+    if (startNode) {
+      startNode.classList.remove('color2');
+      startNode = null;
+    }
+    if (endNode) {
+      endNode.classList.remove('color3');
+      endNode = null;
+    }
+    gridButtons.forEach(button => {
+      if (button.classList.contains('color5')) {
+        button.classList.remove('color5');
+      }
+      else if(button.classList.contains('color4')){
+        button.classList.remove('color4');
+      }
     });
   }
 
@@ -90,13 +128,13 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
           const x = parseInt(node.x);
           const y = parseInt(node.y);
-          const button = gridContainer.querySelector(`.grid-button[data-x="${x}"][data-y="${y}"]`);
+          const button = gridButtons.find(btn => btn.dataset.x === `${x}` && btn.dataset.y === `${y}`);
           if (button) {
             activeColor = 4; // Change color for the final path
             changeColor(button);
             console.log('Colored');
           }
-        }, index * 20);
+        }, index * 40);
       });
       activeColor = 0; // Reset activeColor after highlighting
     } else {
@@ -109,34 +147,33 @@ document.addEventListener('DOMContentLoaded', function () {
       if (startNode && endNode) {
         const path = calculateAStarPath();
         if (path) {
+          activeColor = 5;
           path.forEach((node, index) => {
             setTimeout(() => {
               const x = parseInt(node.x);
               const y = parseInt(node.y);
-              const button = gridContainer.querySelector(`.grid-button[data-x="${x}"][data-y="${y}"]`);
+              const button = gridButtons.find(btn => btn.dataset.x === `${x}` && btn.dataset.y === `${y}`);
               if (button) {
-                activeColor = 5;
                 changeColor(button);
-                console.log('Colored');
               }
-            }, index * 20);
+            }, index * 40);
           });
           activeColor = 0;
-          setTimeout(() => {
-            highlightFastestPath(path);
-          }, path.length * 20); // Adjust the delay if needed
+          highlightFastestPath(path);
         }
       } else {
         console.error('startNode or endNode is not initialized.');
       }
     } else if (event.key === '2') {
       clearAll();
+    } else if (event.key === '3') {
+      clearPath();
     }
   }
 
   function calculateAStarPath() {
-    const width = 25;
-    const height = 10;
+    const width = xGridSize;
+    const height = yGridSize;
 
     function aStar(start, goal) {
       let explored = [];
@@ -146,42 +183,42 @@ document.addEventListener('DOMContentLoaded', function () {
         estimate: heuristic(start, goal),
         path: [start]
       }];
-    
+
       function colorExploredNode(node) {
         const x = parseInt(node.state.x);
         const y = parseInt(node.state.y);
-        const button = gridContainer.querySelector(`.grid-button[data-x="${x}"][data-y="${y}"]`);
+        const button = gridButtons.find(btn => btn.dataset.x === `${x}` && btn.dataset.y === `${y}`);
         if (button) {
           activeColor = 5;
           changeColor(button);
           console.log('Colored');
         }
       }
-    
+
       while (frontier.length > 0) {
         frontier.sort((a, b) => a.cost + a.estimate - (b.cost + b.estimate)); // Sort by total cost
         let node = frontier.shift();
         explored.push(node);
-    
+
         colorExploredNode(node);
-    
+
         if (node.state.x == goal.x && node.state.y == goal.y) {
           return node.path;
         }
-    
+
         let next = generateNextSteps(node.state);
         for (let i = 0; i < next.length; i++) {
           let step = next[i];
           let cost = step.cost + node.cost;
-    
+
           let isExplored = explored.find(e => e.state.x == step.state.x && e.state.y == step.state.y);
           let isFrontier = frontier.find(e => e.state.x == step.state.x && e.state.y == step.state.y);
-    
+
           if (!isExplored && !isFrontier) {
             colorExploredNode({
               state: step.state
             });
-    
+
             frontier.push({
               state: step.state,
               cost: cost,
@@ -191,10 +228,10 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
       }
-    
+
       return null;
     }
-    
+
     function heuristic(current, goal) {
       return Math.abs(current.x - goal.x) + Math.abs(current.y - goal.y);
     }
@@ -243,8 +280,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function isObstacle(x, y) {
-
-      return gridContainer.querySelector(`.grid-button[data-x="${x}"][data-y="${y}"]`).classList.contains('color1');
+      return gridButtons.some(btn => btn.dataset.x === `${x}` && btn.dataset.y === `${y}` && btn.classList.contains('color1'));
     }
 
     const start = {

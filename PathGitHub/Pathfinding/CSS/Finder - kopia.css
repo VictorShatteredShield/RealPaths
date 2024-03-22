@@ -45,6 +45,7 @@ body {
     width: 140px;
     background-color: Transparent;
     border: none;
+    font-size: 18px;
   }
 
   .GoToHome{
@@ -106,7 +107,7 @@ body {
     border-radius: 10px;
     margin-bottom: 20px;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     margin: 5px;
   }
@@ -129,4 +130,8 @@ body {
 
   .right-set {
     margin-left: 20px;
+  }
+
+  .active{
+    font-size: 28px;
   }
