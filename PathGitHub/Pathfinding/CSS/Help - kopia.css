@@ -1,7 +1,7 @@
 html{
     background-color:rgb(163, 181, 185) ;
 }
-body{
+.color{
     display: grid;
     background-color: rgb(60, 57, 57);
     grid-template-columns: repeat(6, 1fr);
@@ -30,6 +30,10 @@ body{
     text-align: center;
   }
 
+  a{
+    text-decoration: none;
+    color: black;
+}
   header {
     display: flex;
     grid-column: 1 / 7;
@@ -52,10 +56,13 @@ body{
     border-radius: 10px;
     padding-top: 8px;
     padding-left: 50px;
+    border: none;
+    outline: none;
+  
   }
 
   @media only screen and (max-width: 600px) {
-    body {
+    .color {
      display: grid;
      background-color: rgb(60, 57, 57);
      grid-template-columns: repeat(6, 1fr);
