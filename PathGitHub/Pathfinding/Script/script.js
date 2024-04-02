@@ -5,18 +5,56 @@ document.addEventListener('DOMContentLoaded', function () {
   let isMouseDown = false;
   let startNode = null;
   let endNode = null;
-  let xGridSize = 25;
-  let yGridSize = 10;
+
+
+  if(localStorage.getItem("gridSize") == null){
+    localStorage.setItem("gridSize", 25);
+  }
+  let SetXGridSize = localStorage.getItem("gridSize");
+  let xGridSize = SetXGridSize;
+  let yGridSize = 1;
+  
+  window.onresize = window.onload = function() {
+    if(window.innerWidth < 700 && SetXGridSize > 25){
+      xGridSize = 25;
+    }
+    else if(window.innerWidth < 500 && SetXGridSize > 15){
+      xGridSize = 15;
+    }
+    else{
+      xGridSize = SetXGridSize;
+    }
+    //console.log(window.innerWidth);
+    let Ratio = window.innerWidth / window.innerHeight;
+    yGridSize = Math.round(xGridSize / Ratio);
+    //console.log(Ratio);
+    //console.log(yGridSize);
+
+  
+    let buttonSize = (window.innerWidth / xGridSize) - 150/xGridSize - 0.02*xGridSize;
+    //console.log(buttonSize);
+
+    deleteGrid();
+    createGrid(Math.round(buttonSize));
+    //console.log("Grid deleted");
+  
+  }
+
+
   let gridButtons = []; // Store references to grid buttons for faster access
   let currentToolButton = null;
 
-  function createGrid() {
+  function createGrid(ButtonSize) {
+    let widthheight = ButtonSize + "px";
+    //console.log(widthheight);
     for (let i = 0; i < yGridSize; i++) {
       for (let j = 0; j < xGridSize; j++) {
         const button = document.createElement('button');
         button.className = 'grid-button';
         button.dataset.x = j;
         button.dataset.y = i;
+        button.style.width=widthheight;
+        button.style.height=widthheight;
         button.addEventListener('mousedown', handleMouseDown);
         button.addEventListener('mouseenter', handleMouseEnter);
         button.addEventListener('mouseup', handleMouseUp);
@@ -26,6 +64,28 @@ document.addEventListener('DOMContentLoaded', function () {
       gridContainer.appendChild(document.createElement('br'));
     }
   }
+
+  
+    function deleteGrid() {
+      // Remove all grid buttons
+      gridButtons.forEach(button => {
+        button.remove();
+      });
+    
+      // Remove all line breaks
+      const lineBreaks = document.querySelectorAll('#grid-container br');
+      lineBreaks.forEach(lineBreak => {
+        lineBreak.remove();
+      });
+    
+      // Clear references
+      gridButtons = [];
+      startNode = null;
+      endNode = null;
+      activeColor = 0;
+    }
+    
+  
 
   function handleMouseDown() {
     isMouseDown = true;
@@ -334,6 +394,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  createGrid();
+  createGrid(30);
   setActiveColor(0, colorButtons[0]);
 });

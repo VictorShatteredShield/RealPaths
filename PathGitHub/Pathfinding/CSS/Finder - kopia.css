@@ -41,8 +41,8 @@ body {
   }
 
   .But{
-    height: 70px;
-    width: 140px;
+    height: 80px;
+    width: 10vw;
     background-color: Transparent;
     border: none;
     font-size: 18px;
@@ -57,6 +57,7 @@ body {
     padding-inline: 50px;
     border: none;
     outline: none;
+    margin-right: 20px;
   }
   
   .VersionNumber {
@@ -77,6 +78,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 
   }
   .GridBox{
@@ -87,8 +89,6 @@ body {
   .grid-button {
     border: none;
     outline: none;
-    width: 50px;
-    height: 50px;
     margin: 1px;
     border-radius: 3px;
     cursor: pointer;
@@ -101,15 +101,14 @@ body {
 }
 
   .small-box {
-    width: calc(33.33% - 10px);
+    width: 12vw;
     height: 80px;
     background-color: #36D933;
     border-radius: 10px;
     margin-bottom: 20px;
-    box-sizing: border-box;
     padding: 5px;
     text-align: center;
-    margin: 5px;
+    margin: 1px;
   }
 
   .Start{
@@ -130,8 +129,25 @@ body {
 
   .right-set {
     margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .active{
     font-size: 28px;
+  }
+
+  @media screen and (max-width: 1010px) {
+    .big-box {
+      flex-direction: row; /* Change to column layout */
+    }
+  
+    .right-set {
+      width: 100%; /* Take full width */
+    }
+  
+    .small-box {
+      width: 30%; /* Take full width */
+      margin: 5px 0; /* Adjust margin */
+    }
   }
