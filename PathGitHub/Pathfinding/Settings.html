@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="CSS/Settings - kopia.css">
     </head>
     <script src="Script/SettingsScript.js" defer></script>
-    <body>
-        <header>
+    <body class="darkMode">
+        <header class="darkMode" id="darkMode">
             <a href="Home.html" class="GoToHome">Home</a>
             <div class="VersionNumber">
               <label>Version 1.1</label>
@@ -17,7 +17,14 @@
           <div class="BackgroundThing">
             <div class="GridSize">
               <label for="gridSize">Grid Size:</label>
-              <input type="number" id="gridSize" name="gridSize" min="1" max="50" value="25">
+              <input type="number" id="gridSize" name="gridSize" min="2" max="50" value="25">
+            </div>
+            <div class="switchBack">
+              <label>Dark mode</label>
+              <label class="switch">
+                <input id="toggleSwitch" type="checkbox" data-toggle="toggle" data-onstyle="danger" data-offstyle="success">
+                <span class="slider round"></span>
+              </label>
             </div>
           </div>
     </body>

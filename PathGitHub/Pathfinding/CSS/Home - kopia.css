@@ -4,6 +4,10 @@ body {
     background-color: #A3B5B9;
 }
 
+.darkMode{
+    background-color: black;
+}
+
 .VersionNumber {
     margin-top: 20px;
     margin-left: 80vw;
@@ -48,4 +52,8 @@ a{
 }
 .Documentation{
     background-color: #5CDCE4;
+}
+
+.darkMode{
+    background-color: black;
 }

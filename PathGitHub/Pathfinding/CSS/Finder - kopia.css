@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #A3B5B9;
   }
 
   .ChangeColor.color0 {
@@ -35,9 +35,12 @@ body {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    background-color: #A3B5B9;
     border-radius: 10px;
+  }
+
+  .darkMode{
+    background-color: black;
   }
 
   .But{
@@ -69,11 +72,16 @@ body {
     padding-left: 50px;
   }
 
-  .big-box {
+.centerer{
+  display: flex;
+  justify-content: center;
+}
+
+  .big-box.lightMode {
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
-    background-color: #fff;
+    background-color: #A3B5B9;
     margin-top: 20px;
     display: flex;
     flex-direction: row;
@@ -81,10 +89,24 @@ body {
     flex-wrap: wrap;
 
   }
+
+  .big-box.darkMode{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: black;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
   .GridBox{
     border-radius: 10px;
     padding: 30px;
     background-color: #2B284E;
+    
   }
   .grid-button {
     border: none;

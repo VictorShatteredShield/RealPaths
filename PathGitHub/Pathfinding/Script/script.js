@@ -3,8 +3,29 @@ document.addEventListener('DOMContentLoaded', function () {
   const gridContainer = document.getElementById('grid-container');
   let activeColor = 1;
   let isMouseDown = false;
-  let startNode = null;
-  let endNode = null;
+  let startNode = endNode = null;
+
+
+
+    let DarkModeHandler = document.querySelectorAll(".darkMode");
+
+    if(localStorage.getItem("darkMode") == null){
+        localStorage.setItem("darkMode", 1);
+        
+        for(let x = 0; x <= DarkModeHandler.length; x++){
+            DarkModeHandler[x].classList.toggle("darkMode");
+        }
+
+    }
+    else if(localStorage.getItem("darkMode") == 1){
+
+        for(let x = 0; x < DarkModeHandler.length; x++){
+            DarkModeHandler[x].classList.toggle("darkMode");
+        }
+    }
+
+
+
 
 
   if(localStorage.getItem("gridSize") == null){
@@ -129,20 +150,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     button.classList.add('active');
     currentToolButton = button;
-    switch (color) {
-      case 0:
-        button.innerText = 'Eraser';
-        break;
-      case 1:
-        button.innerText = 'Place wall';
-        break;
-      case 2:
-        button.innerText = 'Place end';
-        break;
-      case 3:
-        button.innerText = 'Place start';
-        break;
-    }
   }
 
 
