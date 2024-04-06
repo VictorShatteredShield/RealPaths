@@ -11,10 +11,43 @@ html{
 
 .TextHeadLine{
     text-align: center;
-    grid-column: 2 / 6;
+    grid-column: 3 / 6;
     grid-row: 2 /6;
     color: white;
 }
+
+.pictures{
+
+ /* display: flex;*/
+ /* justify-content: center; */
+
+
+  grid-column: 2 / 6;/*fixa saker här*/
+ grid-row: 3 /6;
+
+}
+
+
+/*fått det att typ fungera, måste fixa storlekarna nu och göra den anpassad för mindre skärmar.*/
+.aa,.b,.c,.d{
+
+  width: 220px;
+  height: 20px;
+  
+  margin: 5px;
+  background-color: aqua;
+  display: flex;
+
+  justify-content: center; 
+  align-items: column; 
+}
+
+
+
+
+
+
+
 
 /*Header CSS*/
 .GoToHome{
@@ -58,7 +91,7 @@ html{
     padding-left: 50px;
     border: none;
     outline: none;
-  
+
   }
 
   @media only screen and (max-width: 600px) {
