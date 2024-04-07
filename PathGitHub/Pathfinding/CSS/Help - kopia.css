@@ -1,123 +1,131 @@
-html{
-    background-color:rgb(163, 181, 185) ;
-}
-.color{
-    display: grid;
-    background-color: rgb(60, 57, 57);
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 100px 100px 100px 100px 100px 100px;
-    border-radius: 10px;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(163, 181, 185);
 }
 
-.TextHeadLine{
-    text-align: center;
-    grid-column: 3 / 6;
-    grid-row: 2 /6;
-    color: white;
+.GoToHome {
+  width: 200px;
+  height: 40px;
+  background-color: #36d933;
+  border-radius: 10px;
+  padding-top: 25px;
+  padding-inline: 50px;
+  border: none;
+  outline: none;
+  text-align: center;
 }
 
-.pictures{
-
- /* display: flex;*/
- /* justify-content: center; */
-
-
-  grid-column: 2 / 6;/*fixa saker här*/
- grid-row: 3 /6;
-
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgb(163, 181, 185);
+  border-bottom: 1px solid #ddd;
+  border-radius: 10px;
 }
 
-
-/*fått det att typ fungera, måste fixa storlekarna nu och göra den anpassad för mindre skärmar.*/
-.aa,.b,.c,.d{
-
+.VersionNumber {
   width: 220px;
   height: 20px;
-  
-  margin: 5px;
-  background-color: aqua;
-  display: flex;
+  background-color: #7dccc7;
+  border-radius: 10px;
+  padding-top: 8px;
+  padding-left: 50px;
 
-  justify-content: center; 
-  align-items: column; 
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+  background-color: rgb(60, 57, 57);
+  color: #fff;
+}
+h1{
+text-align: center;
+
+}
+.section {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin-top: 50px;
+}
+
+.section .info {
+  background-color: rgb(60, 57, 57);
+  padding: 10px;
+  position: relative;
+}
+
+.section .keybinds {
+  background-color: rgb(60, 57, 57);
+  padding: 10px;
+}
+
+.section.info p,
+ .keybinds p {
+  margin: 0;
+  color: #000;
+}
+
+.div1,
+.div2,
+.div3,
+.div4 {
+  width: 12vw;
+  height: 80px;
+  align-items: center;
+  text-align: center;
+}
+
+.div1 {
+  background-color: #4bfa71;
+  grid-column: span 1;
+}
+
+.div2 {
+  background-color: #889596;
+  grid-column: span 1;
+}
+
+.div3 {
+  background-color: #a339b9;
+  grid-column: span 1;
+}
+
+.div4 {
+  background-color: #2c7c82;
+  grid-column: span 1;
+}
+
+@media only screen and (max-width: 1164px) {
+  .info {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .div1,
+.div2,
+.div3,
+.div4 {
+  width: 18vw;
+  height: 100px;
+  /*align-items: center;*/
+  text-align: center;
 }
 
 
-
-
-
-
-
-
-/*Header CSS*/
-.GoToHome{
-
-    width: 200px;
-    height: 40px;
-    background-color: #36D933;
-    border-radius: 10px;
-    padding-top: 25px;
-    padding-inline: 50px;
-    border: none;
-    outline: none;
-    text-align: center;
-  }
-
-  a{
-    text-decoration: none;
-    color: black;
+.section {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  margin-top: 50px;
 }
-  header {
-    display: flex;
-    grid-column: 1 / 7;
-    grid-row: 1 /2;
-    
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-
-    background-color:rgb(163, 181, 185) ;
-    border-bottom: 1px solid #ddd;
-    border-radius: 10px;
-
-  }
-  .VersionNumber {
-    width: 220px;
-    height: 20px;
-    background-color: #7DCCC7;
-    border-radius: 10px;
-    padding-top: 8px;
-    padding-left: 50px;
-    border: none;
-    outline: none;
-
-  }
-
-  @media only screen and (max-width: 600px) {
-    .color {
-     display: grid;
-     background-color: rgb(60, 57, 57);
-     grid-template-columns: repeat(6, 1fr);
-     grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
-     border-radius: 10px;
- }
-    
-    .TextHeadLine{
-      text-align: center;
-      grid-column: 2 / 7;
-      grid-row: 2 /6;
-  }
-  .GoToHome{
-
-    width: 180px;
-    height: 40px;
-
-    text-align: center;
-
-    margin-right: 30px;
-    border-radius: 10px;
-    padding-top: 10px;
-    padding-inline: 0px;
-  }
 }
