@@ -51,6 +51,14 @@ body {
     font-size: 18px;
   }
 
+  .But2{
+    height: 80px;
+    width: 10vw;
+    background-color: Transparent;
+    border: none;
+    font-size: 25px;
+  }
+
   .GoToHome{
     width: 200px;
     height: 40px;
@@ -61,6 +69,7 @@ body {
     border: none;
     outline: none;
     margin-right: 20px;
+    text-align: center;
   }
   
   .VersionNumber {
@@ -123,6 +132,17 @@ body {
 }
 
   .small-box {
+    width: 12vw;
+    height: 80px;
+    background-color: #36D933;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+    text-align: center;
+    margin: 1px;
+  }
+
+  .small-box2 {
     width: 12vw;
     height: 80px;
     background-color: #36D933;
