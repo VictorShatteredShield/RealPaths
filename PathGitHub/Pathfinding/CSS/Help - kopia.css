@@ -17,6 +17,11 @@ body {
   text-align: center;
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -24,7 +29,7 @@ header {
   padding: 20px;
   box-sizing: border-box;
   background-color: rgb(163, 181, 185);
-  border-bottom: 1px solid #ddd;
+  /*border-bottom: 1px solid #ddd;*/
   border-radius: 10px;
 }
 
@@ -49,7 +54,8 @@ header {
   margin: 0 auto;
   padding-top: 20px;
   background-color: rgb(60, 57, 57);
-  color: #fff;
+ /*Lägga till paragraf sak för att göra texten svart och runda rutorna och lägga till text*/
+ color: #fff;
 }
 h1{
 text-align: center;
@@ -72,16 +78,12 @@ text-align: center;
   padding: 10px;
 }
 
-.section.info p,
- .keybinds p {
+.section.info p,.keybinds p {
   margin: 0;
   color: #000;
 }
 
-.div1,
-.div2,
-.div3,
-.div4 {
+.div1,.div2,.div3,.div4 {
   width: 12vw;
   height: 80px;
   align-items: center;
@@ -112,10 +114,7 @@ text-align: center;
   .info {
       grid-template-columns: repeat(2, 1fr);
   }
-  .div1,
-.div2,
-.div3,
-.div4 {
+  .div1,.div2,.div3,.div4 {
   width: 18vw;
   height: 100px;
   /*align-items: center;*/
@@ -128,4 +127,8 @@ text-align: center;
   grid-template-columns: 65% 35%;
   margin-top: 50px;
 }
+}
+
+.darkMode{
+  background-color: black;
 }
