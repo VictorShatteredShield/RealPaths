@@ -60,10 +60,7 @@ header {
  border-radius: 27px;
 
 }
-h1{
-text-align: center;
 
-}
 .section {
   display: grid;
   grid-template-columns: 70% 30%;
@@ -88,7 +85,7 @@ text-align: center;
   
 }
 
-.div1,.div2,.div3,.div4,.div5,.div6 {
+.div1,.div2,.div3,.div4,.div5,.div6,.div7 {
   width: 12vw;
   height: 80px;
   align-items: center;
@@ -99,6 +96,10 @@ text-align: center;
 h2{
   font-weight:normal
 }
+h1{
+  text-align: center;
+  
+  }
 .div1 {
  
   background-color: #4bfa71;
@@ -120,13 +121,20 @@ h2{
   grid-column: span 1;
 }
 .div5{
-  background-color: aqua;
-  grid-column: span 1;
+  background-color: #36D933;
+    grid-column: span 1;
 
 }
 .div6{
-background-color: blue;
-grid-column: span 1;
+  background-color: #36D933;
+  grid-column: span 1;
+}
+.div7{
+
+
+  background-color: #36D933;
+  grid-column: span 1;
+
 
 
 }
