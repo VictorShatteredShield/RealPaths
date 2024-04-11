@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+  
   const colorButtons = document.querySelectorAll('.small-box button');
   const gridContainer = document.getElementById('grid-container');
+  const GreButtons = document.getElementById("GreButtons");
   let activeColor = 1;
   let isMouseDown = false;
   let startNode = endNode = null;
-
 
 
     let DarkModeHandler = document.querySelectorAll(".darkMode");
@@ -24,10 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-
-    
-
-
   if(localStorage.getItem("gridSize") == null){
     localStorage.setItem("gridSize", 25);
   }
@@ -36,8 +33,11 @@ document.addEventListener('DOMContentLoaded', function () {
   let yGridSize = 1;
   
   window.onresize = window.onload = function() {
-    if(window.innerWidth < 700 && SetXGridSize > 25){
-      xGridSize = 25;
+    if(window.innerWidth < 950 && SetXGridSize > 35){
+      xGridSize = 35;
+    }
+    else if(window.innerWidth < 700 && SetXGridSize > 20){
+      xGridSize = 20;
     }
     else if(window.innerWidth < 500 && SetXGridSize > 15){
       xGridSize = 15;
@@ -210,7 +210,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function calculatePath(event) {
-    if (event.key === '1') {
+    //console.log(event);
+    if (event.key === '1' || event.pointerId == '1') {
       if (startNode && endNode) {
         const path = calculateAStarPath();
         if (path) {
@@ -398,6 +399,45 @@ document.addEventListener('DOMContentLoaded', function () {
   gridContainer.addEventListener('click', function (event) {
     if (event.target.matches('.grid-button')) {
       changeColor(event.target);
+    }
+  });
+
+  let GridLayout = [];
+  let tracker = 0;
+  GreButtons.addEventListener('click', function (event){
+    if(event.target.matches('.Calc')){
+      calculatePath(event);
+    }
+    else if(event.target.matches('.Save')){
+      GridLayout = [];
+      gridButtons.forEach(element => {
+        if(element.classList.contains('color1')){
+          GridLayout.push(1);
+        }
+        else{
+          GridLayout.push(0);
+        }
+      });
+      GridLayout.push(parseInt(xGridSize));
+      GridLayout.push(yGridSize);
+      console.log(GridLayout);
+
+      localStorage.setItem('grid', JSON.stringify(GridLayout));
+    }
+    else if(event.target.matches('.Load')){
+      GridLayout = JSON.parse(localStorage.getItem('grid'));
+      console.log(GridLayout);
+      if(GridLayout[GridLayout.length -1] == yGridSize && GridLayout[GridLayout.length -2] == xGridSize){
+        clearAll();
+        tracker = 0;
+        gridButtons.forEach(element => {
+         if(GridLayout[tracker] == 1){
+          activeColor = 1;
+            changeColor(element);
+         }
+         tracker++;
+      });
+      }
     }
   });
 

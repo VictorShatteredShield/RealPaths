@@ -15,6 +15,7 @@ header {
     border-radius: 10px;
     padding-top: 25px;
     padding-inline: 50px;
+    text-align: center;
     border: none;
     outline: none;
   }
