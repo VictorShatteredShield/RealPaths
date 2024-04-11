@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-
+    
 
 
   if(localStorage.getItem("gridSize") == null){
