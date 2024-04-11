@@ -35,8 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
   let yGridSize = 1;
   
   window.onresize = window.onload = function() {
-    if(window.innerWidth < 700 && SetXGridSize > 25){
-      xGridSize = 25;
+    if(window.innerWidth < 950 && SetXGridSize > 35){
+      xGridSize = 35;
+    }
+    else if(window.innerWidth < 700 && SetXGridSize > 20){
+      xGridSize = 20;
     }
     else if(window.innerWidth < 500 && SetXGridSize > 15){
       xGridSize = 15;
