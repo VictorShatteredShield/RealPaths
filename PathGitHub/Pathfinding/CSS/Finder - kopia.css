@@ -7,7 +7,13 @@ body {
   .ChangeColor.color0 {
     background-color: #2C7C82;
   }
-  
+  .helpText{
+    background-color: #3C3939;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2vw;
+    color: rgb(176, 176, 176);
+  }
   .ChangeColor.color1 {
     background-color: #889596;
   }
