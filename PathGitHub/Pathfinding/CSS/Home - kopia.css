@@ -17,6 +17,8 @@ body {
     border-radius: 10px;
     padding-top: 8px;
     padding-left: 60px;
+    box-shadow:1px 1px 2px rgba(21, 21, 21, 0.9);
+
   }
 
 .BackgroundThing{
@@ -33,6 +35,7 @@ a{
 }
 
 .option{
+    border-style: solid;
     margin: 30px;
     font-size: 40px;
     text-align: center;
@@ -40,21 +43,28 @@ a{
     height: 100px;
     width: 370px;
     border-radius: 15px;
+    background-color: #8FD696;
+    box-shadow:1px 1px 2px rgba(21, 21, 21, 0.9);
+    border-width: 4px;
+}
+
+.option:hover{
+    color: white;
 }
 .pathfinder{
-    background-color: #36D933;
+    border-color: #2ce829;
 }
 .Help{
-    background-color: #BECE58;
+    border-color: #e8fe5b;
 }
 .Settings{
-    background-color: #5B5F60;
+    border-color: #3c4042;
 }
 .Documentation{
-    background-color: #5CDCE4;
+    border-color: #43dae5;
 }
 .Review{
-    background-color: #634b92;
+    border-color: #7758b5;
 }
 .darkMode{
     background-color: black;
