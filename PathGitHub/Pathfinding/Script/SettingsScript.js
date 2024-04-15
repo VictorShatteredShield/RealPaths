@@ -18,7 +18,6 @@ let Header = document.getElementById("darkMode");
 
 if(localStorage.getItem("darkMode") == null){
     document.body.classList.toggle("darkMode");
-    Header.classList.toggle("darkMode");
     localStorage.setItem("darkMode", 1);
 }
 else if(localStorage.getItem("darkMode") == 2){
@@ -27,7 +26,6 @@ else if(localStorage.getItem("darkMode") == 2){
 else{
     checkbox.checked = false;
     document.body.classList.toggle("darkMode");
-    Header.classList.toggle("darkMode");
 }
 
 checkbox.addEventListener('change', function() {
@@ -35,12 +33,9 @@ checkbox.addEventListener('change', function() {
 
   if (this.checked) {
     Body.classList.toggle("darkMode");
-    Header.classList.toggle("darkMode");
     localStorage.setItem("darkMode", 2);
   } else {
     Body.classList.toggle("darkMode");
-    Header.classList.toggle("darkMode");
     localStorage.setItem("darkMode", 1);
   }
 });
-

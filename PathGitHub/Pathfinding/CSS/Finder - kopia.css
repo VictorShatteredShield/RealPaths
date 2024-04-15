@@ -1,21 +1,15 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #A3B5B9;
+    background-image: url(/PathGitHub/Pathfinding/Content/Lightbig.svg);
   }
 
   .ChangeColor.color0 {
-    background-color: #2C7C82;
+    background-color: #8FD696;
   }
-  .helpText{
-    background-color: #3C3939;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 1.2vw;
-    color: rgb(176, 176, 176);
-  }
+
   .ChangeColor.color1 {
-    background-color: #889596;
+    background-color: #a5b5b6;
   }
   
   .ChangeColor.color2 {
@@ -31,7 +25,7 @@ body {
   }
   
   .ChangeColor.color5 {
-    background-color: #99ff00;
+    background-color: #618f66;
   }
   
 
@@ -41,8 +35,9 @@ body {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #A3B5B9;
+    background-color: rgba(65, 65, 65, 0.5);
     border-radius: 10px;
+    margin: 15px;
   }
 
   .darkMode{
@@ -55,6 +50,7 @@ body {
     background-color: Transparent;
     border: none;
     font-size: 18px;
+
   }
 
   .But2{
@@ -81,7 +77,7 @@ body {
   .VersionNumber {
     width: 120px;
     height: 20px;
-    background-color: #7DCCC7;
+    background-color: #8FD696;
     border-radius: 10px;
     padding-top: 8px;
     padding-left: 50px;
@@ -93,34 +89,40 @@ body {
 }
 
   .big-box.lightMode {
-    width: 100%;
+    width: 98%;
     box-sizing: border-box;
     padding: 20px;
     background-color: #A3B5B9;
+    margin: 10px;
     margin-top: 20px;
+    border-radius: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-
+    background-color: rgba(65, 65, 65, 0.5);
   }
 
   .big-box.darkMode{
-    width: 100%;
+    width: 98%;
     box-sizing: border-box;
     padding: 20px;
     background-color: black;
+    margin: 10px;
     margin-top: 20px;
+    border-radius: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: rgba(65, 65, 65, 0.5);
   }
 
   .GridBox{
     border-radius: 10px;
     padding: 30px;
-    background-color: #2B284E;
+    background-color: rgba(65, 65, 65, 0.8);
+    margin-top: 10px;
     
   }
   .grid-button {
@@ -129,15 +131,28 @@ body {
     margin: 1px;
     border-radius: 3px;
     cursor: pointer;
-    background-color: #2C7C82;
+    background-color: #8FD696;
   }
 
   a{
     text-decoration: none;
     color: black;
 }
-
-  .small-box {
+.helpText{
+  background-color: #f6f6f6;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2vw;
+  color: rgb(0, 0, 0);
+}
+.helpDarkMode{
+  background-color: #3C3939;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2vw;
+  color: rgb(176, 176, 176);
+}
+  .small-box, .small-box2 {
     width: 12vw;
     height: 80px;
     background-color: #36D933;
@@ -146,24 +161,18 @@ body {
     padding: 5px;
     text-align: center;
     margin: 1px;
+    box-shadow:1px 1px 2px rgba(21, 21, 21, 0.9);
   }
 
-  .small-box2 {
-    width: 12vw;
-    height: 80px;
-    background-color: #36D933;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 5px;
-    text-align: center;
-    margin: 1px;
+  .But:hover, .But2:hover{
+    color: white;
   }
 
   .Start{
     background-color: #4BFA71;
   }
   .Wall{
-    background-color: #889596;
+    background-color: #a5b5b6;
 
   }
   .End{
@@ -171,7 +180,7 @@ body {
 
   }
   .Erase{
-    background-color: #2C7C82;
+    background-color: #8FD696;
 
   }
 
@@ -194,8 +203,65 @@ body {
       width: 100%; /* Take full width */
     }
   
-    .small-box {
+    .small-box, .small-box2 {
       width: 30%; /* Take full width */
       margin: 5px 0; /* Adjust margin */
     }
   }
+
+
+
+
+
+  /* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}

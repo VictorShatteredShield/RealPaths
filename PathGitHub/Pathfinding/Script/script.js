@@ -9,8 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Dark mode handling
   let DarkModeHandler = document.querySelectorAll(".darkMode");
+  let helpDarkModeHandler = document.getElementById("helpText");
   if(localStorage.getItem("darkMode") == null){
     localStorage.setItem("darkMode", 1);
+    helpDarkModeHandler.classList.toggle("helpDarkMode");
     for(let x = 0; x <= DarkModeHandler.length; x++){
       DarkModeHandler[x].classList.toggle("darkMode");
     }
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     for(let x = 0; x < DarkModeHandler.length; x++){
       DarkModeHandler[x].classList.toggle("darkMode");
     }
+    helpDarkModeHandler.classList.toggle("helpDarkMode");
   }
 
 
@@ -468,3 +471,8 @@ function calculateAStarPath() {
   createGrid(30);
   setActiveColor(0, colorButtons[0]);
 });
+
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
