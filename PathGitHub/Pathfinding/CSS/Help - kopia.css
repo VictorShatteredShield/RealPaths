@@ -54,7 +54,6 @@ header {
   margin: 0 auto;
   padding-top: 20px;
   background-color: rgb(60, 57, 57);
- /*Lägga till paragraf sak för att göra texten svart och runda rutorna och lägga till text*/
  color: #fff;
  border-radius: 27px;
 
@@ -143,7 +142,6 @@ h1{
   .div1,.div2,.div3,.div4,.div5,.div6,.div7 {
   width: 18vw;
   height: 100px;
-  /*align-items: center;*/
   text-align: center;
   font-size: 3vw;
   margin: auto;
