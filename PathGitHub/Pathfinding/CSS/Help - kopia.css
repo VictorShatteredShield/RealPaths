@@ -157,7 +157,9 @@ h1{
   margin-top: 50px;
 }
 }
-
+header.darkMode{
+  background-color: rgba(65, 65, 65, 0.5);
+}
 .darkMode{
   background-color: black;
 }
