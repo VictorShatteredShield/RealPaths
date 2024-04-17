@@ -126,6 +126,7 @@ header {
 }
 body{
   background-image: url(/PathGitHub/Pathfinding/Content/Lightbig.svg);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 .darkMode{
