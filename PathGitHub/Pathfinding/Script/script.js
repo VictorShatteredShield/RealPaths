@@ -6,6 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
   let activeColor = 1; // Active color for painting
   let isMouseDown = false; // Mouse button state
   let startNode = endNode = null; // Start and end nodes for pathfinding
+  const Deletes = [];
+  const Loades = [];
+  
+  for(let a = 1; a < 6; a++){
+    Deletes.push(document.getElementById("del" + a));
+    Loades.push(document.getElementById("ld" + a));
+  }
+
 
   // Dark mode handling
   let DarkModeHandler = document.querySelectorAll(".darkMode");
@@ -449,7 +457,7 @@ function calculateAStarPath() {
 
       localStorage.setItem('grid', JSON.stringify(GridLayout));
     }
-    else if(event.target.matches('.Load')){
+    /*else if(event.target.matches('.Load')){
       // Loading grid layout from local storage
       GridLayout = JSON.parse(localStorage.getItem('grid'));
       console.log(GridLayout);
@@ -464,7 +472,7 @@ function calculateAStarPath() {
          tracker++;
       });
       }
-    }
+    }*/
   });
 
 
@@ -493,9 +501,6 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
-
-
 
   // Initial grid creation
   createGrid(30);
