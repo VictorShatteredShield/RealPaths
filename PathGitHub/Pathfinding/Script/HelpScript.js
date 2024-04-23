@@ -18,3 +18,37 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
+
+
+
+
+class DivClick {
+    constructor() {
+      this.boxes = document.querySelectorAll('#Info .box');
+      this.addClickEvent();
+    }
+  
+    addClickEvent() {
+        console.log("sadasd")
+      this.boxes.forEach(box => {
+        box.addEventListener('click', () => {
+            console.log("sadasd")
+          this.toggleActive(box);
+        });
+      });
+    }
+  
+    toggleActive(box) {
+      // Remove 'active' class from all boxes
+      this.boxes.forEach(b => {
+        b.classList.remove('active');
+        console.log("sadasd")
+      });
+      // Add 'active' class to the clicked box
+      box.classList.add('active');
+      console.log("sadasd")
+    }
+  }
+  
+  // Create an instance of the class
+  const divClick = new DivClick();
