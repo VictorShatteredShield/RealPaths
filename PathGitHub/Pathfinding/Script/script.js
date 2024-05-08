@@ -509,41 +509,12 @@ document.addEventListener('DOMContentLoaded', function () {
     modal.style.display = "none";
   }
 
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
-
-
-  for (let i = 0; i < Deletes.length - 1; i++) {
-    Deletes[i].addEventListener('click', function () {
-      if (localStorage.getItem("mn" + (i + 1)) != null) { localStorage.setItem("mn" + (i + 1), null); }
-    })
-    Loades[i].addEventListener('click', function () {
-      if (localStorage.getItem("mn" + (i + 1)) != null) {
-        // Loading grid layout from local storage
-        GridLayout = JSON.parse(localStorage.getItem("mn" + (i + 1)));
-        console.log(GridLayout);
-        if (GridLayout[GridLayout.length - 1] == yGridSize && GridLayout[GridLayout.length - 2] == xGridSize) {
-          clearAll();
-          tracker = 0;
-          gridButtons.forEach(element => {
-            if (GridLayout[tracker] == 1) {
-              activeColor = 1;
-              changeColor(element);
-            }
-            tracker++;
-          })
-        };
-      }
-      else{
-        console.log("load is null: " + "mn" + (i + 1));
-      }
-    })
-  };
-
+}
 
   // Initial grid creation
   createGrid(30);

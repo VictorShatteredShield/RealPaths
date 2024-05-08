@@ -15,7 +15,7 @@ body {
   border: none;
   outline: none;
   text-align: center;
-  box-shadow:1px 1px 2px rgba(21, 21, 21, 0.4);
+  box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.4);
 
 }
 
@@ -23,7 +23,7 @@ body {
 
 
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
@@ -47,7 +47,7 @@ header {
   border-radius: 10px;
   padding-top: 8px;
   padding-left: 50px;
-  box-shadow:1px 1px 2px rgba(21, 21, 21, 0.4);
+  box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.4);
 }
 
 .info {
@@ -62,8 +62,8 @@ header {
   margin: 0 auto;
   padding-top: 20px;
   background-color: rgba(65, 65, 65, 0.6);
- color: #fff;
- border-radius: 27px;
+  color: #fff;
+  border-radius: 27px;
 
 }
 
@@ -74,7 +74,7 @@ header {
 }
 
 .section .info {
- /* background-color: rgba(65, 65, 65, 0.5);*/
+  /* background-color: rgba(65, 65, 65, 0.5);*/
   padding: 10px;
   position: relative;
 }
@@ -82,13 +82,14 @@ header {
 .section .keybinds {
   padding: 10px;
   border-radius: 27px;
- /* background-color: rgba(65, 65, 65, 0.5);*/
+  /* background-color: rgba(65, 65, 65, 0.5);*/
 }
 
-.section.info p,.keybinds p {
+.section.info p,
+.keybinds p {
   margin: 0;
   color: #000;
-  
+
 }
 
 
@@ -97,7 +98,7 @@ header {
 
 
 
-.active{
+.active {
   font-size: 20px;
 }
 
@@ -106,10 +107,23 @@ header {
 
 
 
-.div1:hover,.div2:hover,.div3:hover,.div4:hover,.div5:hover,.div6:hover,.div7:hover{
+.div1:hover,
+.div2:hover,
+.div3:hover,
+.div4:hover,
+.div5:hover,
+.div6:hover,
+.div7:hover {
   color: white;
 }
-.div1,.div2,.div3,.div4,.div5,.div6,.div7 {
+
+.div1,
+.div2,
+.div3,
+.div4,
+.div5,
+.div6,
+.div7 {
   width: 12vw;
   height: 80px;
   align-items: center;
@@ -118,17 +132,19 @@ header {
   border-radius: 13px;
   margin: 10px;
 }
-h2{
+
+h2 {
   text-align: center;
-  font-weight:normal
+  font-weight: normal
+}
+
+h1 {
+  text-align: center;
 
 }
-h1{
-  text-align: center;
-  
-  }
+
 .div1 {
- 
+
   background-color: #4bfa71;
   grid-column: span 1;
 }
@@ -147,42 +163,53 @@ h1{
   background-color: #8FD696;
   grid-column: span 1;
 }
-.div5{
+
+.div5 {
   background-color: #36D933;
-    grid-column: span 1;
+  grid-column: span 1;
 
 }
-.div6{
+
+.div6 {
   background-color: #36D933;
   grid-column: span 1;
 }
-.div7{
+
+.div7 {
   background-color: #36D933;
   grid-column: span 1;
 }
 
 @media only screen and (max-width: 800px) {
   .info {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-  .div1,.div2,.div3,.div4,.div5,.div6,.div7 {
-  width: 18vw;
-  height: 100px;
-  text-align: center;
-  font-size: 3vw;
-  margin: auto;
+
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5,
+  .div6,
+  .div7 {
+    width: 18vw;
+    height: 100px;
+    text-align: center;
+    font-size: 3vw;
+    margin: auto;
+  }
+
+  .section {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    margin-top: 50px;
+  }
 }
 
-.section {
-  display: grid;
-  grid-template-columns: 65% 35%;
-  margin-top: 50px;
-}
-}
-header.darkMode{
+header.darkMode {
   background-color: rgba(65, 65, 65, 0.5);
 }
-.darkMode{
+
+.darkMode {
   background-color: black;
 }
-

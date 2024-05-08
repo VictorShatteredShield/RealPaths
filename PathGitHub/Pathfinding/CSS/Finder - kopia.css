@@ -1,216 +1,230 @@
 body {
-    margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: url(/PathGitHub/Pathfinding/Content/Lightbig.svg);
-  }
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: url(/PathGitHub/Pathfinding/Content/Lightbig.svg);
+}
 
-  .ChangeColor.color0 {
-    background-color: #8FD696;
-  }
+.ChangeColor.color0 {
+  background-color: #8FD696;
+}
 
-  .ChangeColor.color1 {
-    background-color: #a5b5b6;
-  }
-  
-  .ChangeColor.color2 {
-    background-color: #cf4839;
-  }
-  
-  .ChangeColor.color3 {
-    background-color: #fac34b;
-  }
-  
-  .ChangeColor.color4 {
-    background-color: #f0ff1d;
-  }
-  
-  .ChangeColor.color5 {
-    background-color: #618f66;
-  }
-  
+.ChangeColor.color1 {
+  background-color: #a5b5b6;
+}
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: rgba(65, 65, 65, 0.5);
-    border-radius: 10px;
-    margin: 15px;
-  }
+.ChangeColor.color2 {
+  background-color: #cf4839;
+}
 
-  .darkMode{
-    background-color: black;
-  }
+.ChangeColor.color3 {
+  background-color: #fac34b;
+}
 
-  .But{
-    height: 80px;
-    width: 10vw;
-    background-color: Transparent;
-    border: none;
-    font-size: 18px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
+.ChangeColor.color4 {
+  background-color: #f0ff1d;
+}
 
-  .But2{
-    height: 80px;
-    width: 10vw;
-    background-color: Transparent;
-    border: none;
-    font-size: 25px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
+.ChangeColor.color5 {
+  background-color: #618f66;
+}
 
-  .GoToHome{
-    width: 200px;
-    height: 40px;
-    background-color: #36D933;
-    border-radius: 10px;
-    padding-top: 25px;
-    padding-inline: 50px;
-    border: none;
-    outline: none;
-    margin-right: 20px;
-    text-align: center;
-    box-shadow:1px 1px 2px rgba(21, 21, 21, 0.4);
-  }
-  
-  .VersionNumber {
-    width: 120px;
-    height: 20px;
-    background-color: #8FD696;
-    border-radius: 10px;
-    padding-top: 8px;
-    padding-left: 50px;
-    box-shadow:1px 1px 2px rgba(21, 21, 21, 0.4);
-  }
 
-.centerer{
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(65, 65, 65, 0.5);
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.darkMode {
+  background-color: black;
+}
+
+.But {
+  height: 80px;
+  width: 10vw;
+  background-color: Transparent;
+  border: none;
+  font-size: 18px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.But2 {
+  height: 80px;
+  width: 10vw;
+  background-color: Transparent;
+  border: none;
+  font-size: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.GoToHome {
+  width: 200px;
+  height: 40px;
+  background-color: #36D933;
+  border-radius: 10px;
+  padding-top: 25px;
+  padding-inline: 50px;
+  border: none;
+  outline: none;
+  margin-right: 20px;
+  text-align: center;
+  box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.4);
+}
+
+.VersionNumber {
+  width: 120px;
+  height: 20px;
+  background-color: #8FD696;
+  border-radius: 10px;
+  padding-top: 8px;
+  padding-left: 50px;
+  box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.4);
+}
+
+.centerer {
   display: flex;
   justify-content: center;
 }
 
-  .big-box.lightMode {
-    width: 98%;
-    box-sizing: border-box;
-    padding: 20px;
-    background-color: #A3B5B9;
-    margin: 10px;
-    margin-top: 20px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: rgba(65, 65, 65, 0.5);
-  }
-
-  .big-box.darkMode{
-    width: 98%;
-    box-sizing: border-box;
-    padding: 20px;
-    background-color: black;
-    margin: 10px;
-    margin-top: 20px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: rgba(65, 65, 65, 0.5);
-  }
-
-  .GridBox{
-    border-radius: 10px;
-    padding: 30px;
-    background-color: rgba(65, 65, 65, 0.8);
-    margin-top: 10px;
-    
-  }
-  .grid-button {
-    border: none;
-    outline: none;
-    margin: 1px;
-    border-radius: 3px;
-    cursor: pointer;
-    background-color: #8FD696;
-  }
-
-  a{
-    text-decoration: none;
-    color: black;
+.big-box.lightMode {
+  width: 98%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #A3B5B9;
+  margin: 10px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgba(65, 65, 65, 0.5);
 }
-.helpText{
+
+.big-box.darkMode {
+  width: 98%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: black;
+  margin: 10px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgba(65, 65, 65, 0.5);
+}
+
+.GridBox {
+  border-radius: 10px;
+  padding: 30px;
+  background-color: rgba(65, 65, 65, 0.8);
+  margin-top: 10px;
+
+}
+
+.grid-button {
+  border: none;
+  outline: none;
+  margin: 1px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #8FD696;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.helpText {
   background-color: #f6f6f6;
   padding: 10px;
   border-radius: 10px;
   font-size: 1.2vw;
   color: rgb(0, 0, 0);
 }
-.helpDarkMode{
+
+.helpDarkMode {
   background-color: #3C3939;
   padding: 10px;
   border-radius: 10px;
   font-size: 1.2vw;
   color: rgb(176, 176, 176);
 }
-  .small-box, .small-box2 {
-    width: 12vw;
-    height: 80px;
-    background-color: #36D933;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 5px;
-    text-align: center;
-    margin: 1px;
-    box-shadow:1px 1px 2px rgba(21, 21, 21, 0.9);
-  }
 
-  .But:hover, .But2:hover{
-    color: white;
-  }
+.small-box,
+.small-box2 {
+  width: 12vw;
+  height: 80px;
+  background-color: #36D933;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 5px;
+  text-align: center;
+  margin: 1px;
+  box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.9);
+}
 
-  .Start{
-    background-color: #fac34b;
-  }
-  .Wall{
-    background-color: #a5b5b6;
+.But:hover,
+.But2:hover {
+  color: white;
+}
 
-  }
-  .End{
-    background-color: #cf4839;
+.Start {
+  background-color: #fac34b;
+}
 
-  }
-  .Erase{
-    background-color: #8FD696;
+.Wall {
+  background-color: #a5b5b6;
 
+}
+
+.End {
+  background-color: #cf4839;
+
+}
+
+.Erase {
+  background-color: #8FD696;
+
+}
+
+.right-set {
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.active {
+  font-size: 28px;
+}
+
+@media screen and (max-width: 1010px) {
+  .big-box {
+    flex-direction: row;
+    /* Change to column layout */
   }
 
   .right-set {
-    margin-left: 20px;
-    display: flex;
-    flex-wrap: wrap;
+    width: 100%;
+    /* Take full width */
   }
 
-  .active{
-    font-size: 28px;
+  .small-box,
+  .small-box2 {
+    width: 30%;
+    /* Take full width */
+    margin: 5px 0;
+    /* Adjust margin */
   }
-
-  @media screen and (max-width: 1010px) {
-    .big-box {
-      flex-direction: row; /* Change to column layout */
-    }
-  
-    .right-set {
-      width: 100%; /* Take full width */
-    }
-  
-    .small-box, .small-box2 {
-      width: 30%; /* Take full width */
-      margin: 5px 0; /* Adjust margin */
-    }
-  }
+}
 
 
 
@@ -218,16 +232,24 @@ body {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 /* The Close Button */
@@ -254,7 +276,9 @@ body {
 }
 
 /* Modal Body */
-.modal-body {padding: 2px 16px;}
+.modal-body {
+  padding: 2px 16px;
+}
 
 /* Modal Footer */
 .modal-footer {
@@ -272,18 +296,18 @@ body {
   padding: 0;
   border: 1px solid #888;
   width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation-name: animatetop;
   animation-duration: 0.6s
 }
 
-.OptionContainer{
+.OptionContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.LoadOptionContainer{
+.LoadOptionContainer {
   padding: 10px;
   margin: 20px;
   background-color: #618f66;
@@ -292,13 +316,14 @@ body {
   height: 7vw;
   color: white;
 }
-.LoadOption{
-  
+
+.LoadOption {
+
   display: flex;
   justify-content: center;
 }
 
-.menyButton{
+.menyButton {
   background-color: #51a351;
   border-style: none;
   color: white;
@@ -308,7 +333,7 @@ body {
   margin: 5px;
   width: 45%;
   height: 100%;
-  box-shadow:1px 1px 2px rgba(21, 21, 21, 0.3);
+  box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.3);
 }
 .menyButton:hover{
   color: rgb(19, 91, 24);
@@ -316,6 +341,13 @@ body {
 
 /* Add Animation */
 @keyframes animatetop {
-  from {top: -300px; opacity: 0}
-  to {top: 30vh; opacity: 1}
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 30vh;
+    opacity: 1
+  }
 }
