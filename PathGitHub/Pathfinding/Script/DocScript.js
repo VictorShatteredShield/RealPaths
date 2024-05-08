@@ -18,3 +18,34 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
+
+  async function fetchAPI()
+  {
+    fetch('https://en.wikipedia.org/w/api.php?action=query&origin=*&titles=A*_search_algorithm&prop=extracts&format=json&exintro=1', {
+    mode:  'cors', 
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+    })
+
+    .then(response => response.json())
+    .then(data => 
+        {   
+            const page = data.query.pages['100558'];
+            const extract = page.extract;
+            document.querySelector('.text-box').innerHTML = extract;
+            console.log(data);
+            
+        })
+
+
+    .catch(error => console.error(error));
+}
+
+
+
+
+
+
+

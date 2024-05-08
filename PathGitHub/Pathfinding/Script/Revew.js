@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    //DarkMode
     let DarkModeHandler = document.querySelectorAll(".darkMode");
     if(localStorage.getItem("darkMode") == null){
         localStorage.setItem("darkMode", 1);
@@ -11,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
             DarkModeHandler[x].classList.toggle("darkMode");
         }
     }
-const url = `https://api.thecatapi.com/v1/images/search?limit=10`;
+
+    //Cat pictures api
+const url = `https://api.thecatapi.com/v1/images/search?limit=1`;
 const api_key = "DEMO_API_KEY"
 
  fetch(url,{headers: {

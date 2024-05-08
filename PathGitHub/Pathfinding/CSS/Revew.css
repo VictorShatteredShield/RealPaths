@@ -5,7 +5,6 @@ body {
     background-image: url(/PathGitHub/Pathfinding/Content/Lightbig.svg);
     background-size: cover;
   }
-  
   .GoToHome {
     width: 200px;
     height: 40px;
@@ -49,68 +48,17 @@ body {
   
   
   .container {
-    width: 80%;
-    height: 1px;
-    margin: 0 auto;
-    padding-top: 20px;
-    background-color: rgba(65, 65, 65, 0.6);
+   width: 80%;
+   height: auto;
+   margin: 0 auto;
+   padding-top: 20px;
+   background-color: rgba(65, 65, 65, 0.6);
    color: #fff;
    border-radius: 27px;
-  
+   padding: 30px;
+   margin-bottom: 20px;
   }
-  
-    /*.div1,.div2,.div3,.div4,.div5,.div6,.div7 {
-    width: 12vw;
-    height: 80px;
-    align-items: center;
-    text-align: center;
-    color: #000000;
-    border-radius: 13px;
-    margin: 10px;
-  }
-  h2{
-    text-align: center;
-    font-weight:normal
-  
-  }
-  h1{
-    text-align: center;
-    
-    }
-  .div1 {
    
-    background-color: #4bfa71;
-    grid-column: span 1;
-  }
-  
-  .div2 {
-    background-color: #a5b5b6;
-    grid-column: span 1;
-  }
-  
-  .div3 {
-    background-color: #a339b9;
-    grid-column: span 1;
-  }
-  
-  .div4 {
-    background-color: #8FD696;
-    grid-column: span 1;
-  }
-  .div5{
-    background-color: #36D933;
-      grid-column: span 1;
-  
-  }
-  .div6{
-    background-color: #36D933;
-    grid-column: span 1;
-  }
-  .div7{
-    background-color: #36D933;
-    grid-column: span 1;
-  }
-  */
   .darkMode{
     background-color: black;
   }
