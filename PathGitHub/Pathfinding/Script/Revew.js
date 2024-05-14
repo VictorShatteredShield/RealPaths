@@ -48,7 +48,7 @@ function saveReview() {
     alert('Review saved successfully!');
   }
   
-  // function to load review text 
+  // unction to load review text 
   function loadReview() {
     const savedReview = localStorage.getItem('savedReview');
     if (savedReview) {
