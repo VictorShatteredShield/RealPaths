@@ -457,7 +457,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       tracker = 1;
       while(true){
-        console.log(tracker);f
+        console.log(tracker);
         if(tracker > 5){
           console.log("Storage full");
           break;
