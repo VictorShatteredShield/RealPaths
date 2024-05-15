@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 100fr;
   font-family: Arial, sans-serif;
-  background-image: url(/PathGitHub/Pathfinding/Content/Lightbig.svg);
+  background-image: url(../Content/Lightbig.svg);
   background-size: cover;
 }
 
