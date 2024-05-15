@@ -1,105 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>RealPaths</title>
-        <link rel="stylesheet" href="CSS/Finder - kopia.css">
-    </head>
-    <script src="Script/script.js" defer></script>
-    <body class="darkMode">
 
-        <header>
-          <a href="Home.html" class="GoToHome">Home</a>
-          <div class="helpText helpDarkMode" id="helpText">Dont know what to do? Go to help in the home meny</div>
-          <div class="VersionNumber">
-            <label>Version 1.69</label>
-          </div>
-        </header>
-      
-        <div class="centerer">
-          <div class="GridBox" id="grid-container"> </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RealPaths</title>
+  <link rel="stylesheet" href="CSS/Finder - kopia.css">
+</head>
+<script src="Script/script.js" defer></script>
+
+<body class="darkMode">
+
+  <header>
+    <a href="Home.html" class="GoToHome">Home</a>
+    <div class="helpText helpDarkMode" id="helpText">Dont know what to do? Go to help in the home meny</div>
+    <div class="VersionNumber">
+      <label>Version 1.69</label>
+    </div>
+  </header>
+
+  <div class="centerer">
+    <div class="GridBox" id="grid-container"> </div>
+  </div>
+
+  <div class="big-box darkMode lightMode" id="GreButtons">
+    <div class="small-box2">
+      <button class="But2 Calc">Calculate</button>
+    </div>
+    <div class="small-box2">
+      <button class="But2 Save">Save</button>
+    </div>
+    <div class="small-box2">
+      <button class="But2 Load" id="myBtn">Load</button>
+    </div>
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Load meny</h2>
         </div>
-      
-        <div class="big-box darkMode lightMode" id="GreButtons">
-          <div class="small-box2">
-            <button class="But2 Calc">Calculate</button>
-          </div>
-          <div class="small-box2">
-            <button class="But2 Save">Save</button>
-          </div>
-          <div class="small-box2">
-            <button class="But2 Load" id="myBtn">Load</button>
-          </div>
-
-          <div id="myModal" class="modal">
-
-           <!-- Modal content -->
-           <div class="modal-content">
-            <div class="modal-header">
-              <span class="close">&times;</span>
-              <h2>Load meny</h2>
-            </div>
-            <div class="modal-body">
-              <p>Choose to load an available save</p>
-              <div class="OptionContainer">
-                <div class="LoadOptionContainer"> Load 1
-                  <div class="LoadOption">
-                    <button class="menyButton" id="ld1">Load</button>
-                    <button class="menyButton" id="del1">Delete</button>
-                  </div>
-                </div>
-                <div class="LoadOptionContainer"> Load 2
-                  <div class="LoadOption">
-                    <button class="menyButton" id="ld2">Load</button>
-                    <button class="menyButton" id="del2">Delete</button>
-                  </div>
-                </div>
-                <div class="LoadOptionContainer"> Load 3
-                  <div class="LoadOption">
-                    <button class="menyButton" id="ld3">Load</button>
-                    <button class="menyButton" id="del3">Delete</button>
-                  </div>
-                </div>
-                <div class="LoadOptionContainer"> Load 4
-                  <div class="LoadOption">
-                    <button class="menyButton" id="ld4">Load</button>
-                    <button class="menyButton" id="del4">Delete</button>
-                  </div>
-                </div>
-                <div class="LoadOptionContainer"> Load 5
-                  <div class="LoadOption">
-                    <button class="menyButton" id="ld5">Load</button>
-                    <button class="menyButton" id="del5">Delete</button>
-                  </div>
-                </div>
+        <div class="modal-body">
+          <p>Choose to load an available save</p>
+          <div class="OptionContainer">
+            <div class="LoadOptionContainer"> Load 1
+              <div class="LoadOption">
+                <button class="menyButton" id="ld1">Load</button>
+                <button class="menyButton" id="del1">Delete</button>
               </div>
             </div>
-            <div class="modal-footer">
-              
-            </div>           </div>
-
-</div>
-
-
-          <div class="right-set"></div>
-
-          <div class="small-box Erase">
-            <button class="ChangeBlue But" data-color="0">Eraser</button>
-          </div>
-
-          <div class="small-box Wall">
-            <button class="ChangeBlue But" data-color="1">Place wall</button>
-          </div>
-
-          <div class="small-box End">
-            <button class="ChangeYellow But" data-color="2">Place End</button>
-          </div>
-
-          <div class="small-box Start">
-            <button class="ChangeGreen But" data-color="3">Place start</button>
+            <div class="LoadOptionContainer"> Load 2
+              <div class="LoadOption">
+                <button class="menyButton" id="ld2">Load</button>
+                <button class="menyButton" id="del2">Delete</button>
+              </div>
+            </div>
+            <div class="LoadOptionContainer"> Load 3
+              <div class="LoadOption">
+                <button class="menyButton" id="ld3">Load</button>
+                <button class="menyButton" id="del3">Delete</button>
+              </div>
+            </div>
+            <div class="LoadOptionContainer"> Load 4
+              <div class="LoadOption">
+                <button class="menyButton" id="ld4">Load</button>
+                <button class="menyButton" id="del4">Delete</button>
+              </div>
+            </div>
+            <div class="LoadOptionContainer"> Load 5
+              <div class="LoadOption">
+                <button class="menyButton" id="ld5">Load</button>
+                <button class="menyButton" id="del5">Delete</button>
+              </div>
+            </div>
           </div>
         </div>
-      
-      </body>
+        <div class="modal-footer">
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="right-set"></div>
+
+    <div class="small-box Erase">
+      <button class="ChangeBlue But" data-color="0">Eraser</button>
+    </div>
+
+    <div class="small-box Wall">
+      <button class="ChangeBlue But" data-color="1">Place wall</button>
+    </div>
+
+    <div class="small-box End">
+      <button class="ChangeYellow But" data-color="2">Place End</button>
+    </div>
+
+    <div class="small-box Start">
+      <button class="ChangeGreen But" data-color="3">Place start</button>
+    </div>
+  </div>
+
+</body>
+
 </html>

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     //Cat pictures api
-const url = `https://api.thecatapi.com/v1/images/search?limit=1`;
+const url = `https://api.thecatapi.com/v1/images/search?limit=10`;
 const api_key = "DEMO_API_KEY"
 
  fetch(url,{headers: {
@@ -40,3 +40,21 @@ const api_key = "DEMO_API_KEY"
    console.log(error);
 });
 });
+
+// function to save review text 
+function saveReview() {
+    const reviewText = document.getElementById('reviewInput').value;
+    localStorage.setItem('savedReview', reviewText);
+    alert('Review saved successfully!');
+  }
+  
+  // unction to load review text 
+  function loadReview() {
+    const savedReview = localStorage.getItem('savedReview');
+    if (savedReview) {
+        document.getElementById('reviewInput').value = savedReview;
+        alert('Review loaded from storage!');
+    } else {
+        alert('No review found in storage.');
+    }
+  }
