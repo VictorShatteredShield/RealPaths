@@ -136,15 +136,14 @@ header {
 h2 {
   text-align: center;
   font-weight: normal
+  
 }
 
 h1 {
   text-align: center;
-
 }
 
 .div1 {
-
   background-color: #4bfa71;
   grid-column: span 1;
 }
@@ -180,7 +179,7 @@ h1 {
   grid-column: span 1;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 790px) {
   .info {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -198,7 +197,9 @@ h1 {
     font-size: 3vw;
     margin: auto;
   }
-
+  h2{
+margin: 0;
+  }
   .section {
     display: grid;
     grid-template-columns: 65% 35%;
