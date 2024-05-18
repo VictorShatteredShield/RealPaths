@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to calculate path
   function calculatePath(event) {
-    if (event.key === '1' || event.pointerId == '1') {
+    if (event.key === '1' || event.pointerId == '1' || event.type === 'touchstart') {
       if (startNode && endNode) {
         const path = calculateAStarPath();
         if (path) {
