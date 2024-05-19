@@ -219,8 +219,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Function to calculate path
-  function calculatePath(event) {
-    if (event.key === '1' || event.pointerId == '1' || event.type === 'touchstart') {
+  function calculatePath() {
+    
       if (startNode && endNode) {
         const path = calculateAStarPath();
         if (path) {
@@ -241,11 +241,6 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
         console.error('startNode or endNode is not initialized.');
       }
-    } else if (event.key === '2') {
-      clearAll();
-    } else if (event.key === '3') {
-      clearPath();
-    }
   }
 
   // Function to calculate A* pathfinding
@@ -409,7 +404,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Handling keydown event
   document.addEventListener('keydown', function (event) {
-    calculatePath(event);
+    if(event.key === '1'){
+      calculatePath();
+    }
+   else if (event.key === '2') {
+    clearAll();
+  } 
+  else if (event.key === '3') {
+    clearPath();
+  }
   });
 
   // Mouse event listeners for grid container
@@ -438,7 +441,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Event listener for save/load buttons
   GreButtons.addEventListener('click', function (event) {
     if (event.target.matches('.Calc')) {
-      calculatePath(event);
+      calculatePath();
     }
     else if (event.target.matches('.Save')) {
       // Saving grid layout to local storage
